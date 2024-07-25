@@ -1,5 +1,3 @@
-![DL Count](https://img.shields.io/github/downloads/turtle-insect/DQ8/total.svg)
-
 # 概要
 3DS ドラゴンクエスト8のセーブデータ編集Tool
 
@@ -8,13 +6,13 @@ http://www.dragonquest.jp/dq8/
 
 # 実行に必要
 * Windows マシン
-* .NET Framework 4.8の導入
+* .NET Framework 4.5の導入
 * セーブデータの吸い出し
 * セーブデータの書き戻し
 
 # Build環境
 * Windows 10(64bit)
-* Visual Studio 2022
+* Visual Studio 2017
 
 # 編集時の手順
 * saveDataを吸い出す
