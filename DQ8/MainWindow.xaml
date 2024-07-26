@@ -20,29 +20,29 @@
         </Grid.Resources>
         <DockPanel>
             <Menu DockPanel.Dock="Top">
-                <MenuItem Header="ファイル(_F)">
-                    <MenuItem Header="開く(_O)" Click="MenuItemFileOpen_Click"/>
-                    <MenuItem Header="上書き保存(_S)" Click="MenuItemFileSave_Click"/>
-                    <MenuItem Header="名前を付けて保存(_S)" Click="MenuItemFileSaveAs_Click"/>
+                <MenuItem Header="文件(_F)">
+                    <MenuItem Header="打开(_O)" Click="MenuItemFileOpen_Click"/>
+                    <MenuItem Header="保存(_S)" Click="MenuItemFileSave_Click"/>
+                    <MenuItem Header="另存为(_S)" Click="MenuItemFileSaveAs_Click"/>
                     <Separator/>
-                    <MenuItem Header="終了(_X)" Click="MenuItemExit_Click"/>
+                    <MenuItem Header="退出(_X)" Click="MenuItemExit_Click"/>
                 </MenuItem>
-                <MenuItem Header="情報(_A)" Click="MenuItemAbout_Click"/>
+                <MenuItem Header="关于(_A)" Click="MenuItemAbout_Click"/>
             </Menu>
             <ToolBar DockPanel.Dock="Top">
-                <Button Width="32" Height="32" Click="ToolBarFileOpen_Click" ToolTip="開く">
+                <Button Width="32" Height="32" Click="ToolBarFileOpen_Click" ToolTip="打开">
                     <Image Source="{StaticResource Open}"/>
                 </Button>
                 <Button Width="32" Height="32" Click="ToolBarFileSave_Click" ToolTip="保存">
                     <Image Source="{StaticResource Save}"/>
                 </Button>
                 <ComboBox SelectedIndex="0" SelectionChanged="ToolBarAdventure_SelectionChanged">
-                    <ComboBoxItem Content="ぼうけんのしょ1"/>
-                    <ComboBoxItem Content="ぼうけんのしょ2"/>
+                    <ComboBoxItem Content="冒险之书1"/>
+                    <ComboBoxItem Content="冒险之书2"/>
                 </ComboBox>
             </ToolBar>
             <TabControl>
-                <TabItem Header="基本設定">
+                <TabItem Header="基本设置">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -69,45 +69,45 @@
                             <ColumnDefinition/>
                             <ColumnDefinition Width="50"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.RowSpan="2" Content="プレイ時間" VerticalAlignment="Center"/>
+                        <Label Grid.RowSpan="2" Content="游玩时间" VerticalAlignment="Center"/>
                         <TextBox Grid.Column="1" Text="{Binding PlayHour, UpdateSourceTrigger=PropertyChanged}"/>
-                        <Label Grid.Column="2" Content="時間"/>
+                        <Label Grid.Column="2" Content="时间"/>
                         <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding PlayMinute, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="1" Grid.Column="2" Content="分"/>
                         <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding PlaySecond, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="2" Grid.Column="2" Content="秒"/>
-                        <Label Grid.Row="3" Content="お金"/>
+                        <Label Grid.Row="3" Content="持有金"/>
                         <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding GoldHand, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="3" Grid.Column="2" Content="G"/>
-                        <Label Grid.Row="4" Content="銀行"/>
+                        <Label Grid.Row="4" Content="银行"/>
                         <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding GoldBank, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="4" Grid.Column="2" Content="G"/>
-                        <Label Grid.Row="5" Content="カジノコイン"/>
+                        <Label Grid.Row="5" Content="赌场硬币"/>
                         <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding CasinoCoin, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="5" Grid.Column="2" Content="枚"/>
-                        <Label Grid.Row="6" Content="ちいさなメダル"/>
+                        <Label Grid.Row="6" Content="小徽章"/>
                         <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding SmallMedal, UpdateSourceTrigger=PropertyChanged}"/>
-                        <Label Grid.Row="8" Content="名前"/>
+                        <Label Grid.Row="8" Content="姓名"/>
                         <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding HeroName, UpdateSourceTrigger=PropertyChanged}"/>
-                        <Label Grid.Row="10" Content="錬金釜"/>
+                        <Label Grid.Row="10" Content="炼金炉"/>
                         <CheckBox Grid.Row="10" Grid.Column="1" VerticalAlignment="Center" IsChecked="{Binding Alchemy}"/>
-                        <Label Grid.Row="11" Content="モンスターチーム編成"/>
+                        <Label Grid.Row="11" Content="怪物队伍构成"/>
                         <CheckBox Grid.Row="11" Grid.Column="1" VerticalAlignment="Center" IsChecked="{Binding TermMake}"/>
-                        <Label Grid.Row="12" Content="モンスターチーム呼び"/>
+                        <Label Grid.Row="12" Content="怪物小队召唤"/>
                         <CheckBox Grid.Row="12" Grid.Column="1" VerticalAlignment="Center" IsChecked="{Binding TermCall}"/>
                         <Label Grid.Row="6" Grid.Column="2" Content="枚"/>
-                        <Label Grid.RowSpan="2" Grid.Column="4" Content="走破距離" VerticalAlignment="Center"/>
+                        <Label Grid.RowSpan="2" Grid.Column="4" Content="行驶距离" VerticalAlignment="Center"/>
                         <TextBox Grid.Row="0" Grid.Column="5" Text="{Binding RunKm, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="0" Grid.Column="6" Content="Km"/>
                         <TextBox Grid.Row="1" Grid.Column="5" Text="{Binding Runm, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="1" Grid.Column="6" Content="m"/>
-                        <Label Grid.Row="2" Grid.Column="4" Content="戦闘回数"/>
+                        <Label Grid.Row="2" Grid.Column="4" Content="战斗次数"/>
                         <TextBox Grid.Row="2" Grid.Column="5" Text="{Binding BattleCount, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="2" Grid.Column="6" Content="回"/>
-                        <Label Grid.Row="3" Grid.Column="4" Content="倒した匹数"/>
+                        <Label Grid.Row="3" Grid.Column="4" Content="击败的怪物数量"/>
                         <TextBox Grid.Row="3" Grid.Column="5" Text="{Binding KillCount, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="3" Grid.Column="6" Content="匹"/>
-                        <Label Grid.Row="4" Grid.Column="4" Content="追い払った匹数"/>
+                        <Label Grid.Row="4" Grid.Column="4" Content="逃走的动物数量"/>
                         <TextBox Grid.Row="4" Grid.Column="5" Text="{Binding WardOffCount, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="4" Grid.Column="6" Content="匹"/>
                         <Label Grid.Row="5" Grid.Column="4" Content="逃走回数"/>
@@ -119,11 +119,11 @@
                         <Label Grid.Row="7" Grid.Column="4" Content="全滅回数"/>
                         <TextBox Grid.Row="7" Grid.Column="5" Text="{Binding AnnihilationCount, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="7" Grid.Column="6" Content="回"/>
-                        <Label Grid.Row="8" Grid.Column="4" Content="全獲得ゴールド"/>
+                        <Label Grid.Row="8" Grid.Column="4" Content="已获得所有金币"/>
                         <TextBox Grid.Row="8" Grid.Column="5" Text="{Binding TotalGold, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="8" Grid.Column="6" Content="G"/>
-                        <Label Grid.Row="9" Grid.Column="4" Grid.RowSpan="2" Content="最大ダメージ" VerticalAlignment="Center"/>
-                        <Label Grid.Row="9" Grid.Column="6" Content="に"/>
+                        <Label Grid.Row="9" Grid.Column="4" Grid.RowSpan="2" Content="最大伤害" VerticalAlignment="Center"/>
+                        <Label Grid.Row="9" Grid.Column="6" Content="开"/>
                         <TextBox Grid.Row="10" Grid.Column="5" Text="{Binding MaxDamage, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="10" Grid.Column="6" Content="P"/>
                     </Grid>
@@ -171,27 +171,27 @@
                             <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.MP, UpdateSourceTrigger=PropertyChanged}"/>
                             <Label Grid.Row="3" Content="Exp"/>
                             <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.Exp, UpdateSourceTrigger=PropertyChanged}"/>
-                            <Label Grid.Row="4" Content="ちから"/>
+                            <Label Grid.Row="4" Content="力量"/>
                             <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.Power, UpdateSourceTrigger=PropertyChanged}"/>
-                            <Label Grid.Row="5" Content="すばやさ"/>
+                            <Label Grid.Row="5" Content="速度"/>
                             <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.Speed, UpdateSourceTrigger=PropertyChanged}"/>
-                            <Label Grid.Row="6" Content="みのまもり"/>
+                            <Label Grid.Row="6" Content="防守"/>
                             <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.Defense, UpdateSourceTrigger=PropertyChanged}"/>
-                            <Label Grid.Row="7" Content="かしこさ"/>
+                            <Label Grid.Row="7" Content="灵巧"/>
                             <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.Cool, UpdateSourceTrigger=PropertyChanged}"/>
                             <Label Grid.Row="8" Content="HP+"/>
                             <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.HPPlus, UpdateSourceTrigger=PropertyChanged}"/>
                             <Label Grid.Row="9" Content="MP+"/>
                             <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.MPPlus, UpdateSourceTrigger=PropertyChanged}"/>
-                            <Label Grid.Row="10" Content="ちから+"/>
+                            <Label Grid.Row="10" Content="力量+"/>
                             <TextBox Grid.Row="10" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.PowerPlus, UpdateSourceTrigger=PropertyChanged}"/>
-                            <Label Grid.Row="11" Content="すばやさ+"/>
+                            <Label Grid.Row="11" Content="速度+"/>
                             <TextBox Grid.Row="11" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.SpeedPlus, UpdateSourceTrigger=PropertyChanged}"/>
-                            <Label Grid.Row="12" Content="みのまもり+"/>
+                            <Label Grid.Row="12" Content="防守+"/>
                             <TextBox Grid.Row="12" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.DefensePlus, UpdateSourceTrigger=PropertyChanged}"/>
-                            <Label Grid.Row="13" Content="かしこさ+"/>
+                            <Label Grid.Row="13" Content="灵巧+"/>
                             <TextBox Grid.Row="13" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.CoolPlus, UpdateSourceTrigger=PropertyChanged}"/>
-                            <Label Grid.Row="14" Content="スキル+"/>
+                            <Label Grid.Row="14" Content="技能+"/>
                             <TextBox Grid.Row="14" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.SkillPlus, UpdateSourceTrigger=PropertyChanged}"/>
                             <Label Grid.Row="15" Content="{Binding ElementName=ListBoxParty, Path=SelectedItem.Skills[0].Name}"/>
                             <TextBox Grid.Row="15" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.Skills[0].Value, UpdateSourceTrigger=PropertyChanged}"/>
@@ -241,7 +241,7 @@
                                         </DataTemplate>
                                     </ComboBox.ItemTemplate>
                                 </ComboBox>
-                                <Label Grid.Column="2" Content="よろい"/>
+                                <Label Grid.Column="2" Content="铠甲"/>
                                 <ComboBox Grid.Column="3" ItemsSource="{Binding ElementName=ListBoxCharactorItem, Path=Items}" SelectedIndex="{Binding ElementName=ListBoxParty, Path=SelectedItem.EquipmentArmor}">
                                     <ComboBox.ItemTemplate>
                                         <DataTemplate>
@@ -257,7 +257,7 @@
                                         </DataTemplate>
                                     </ComboBox.ItemTemplate>
                                 </ComboBox>
-                                <Label Grid.Row="1" Grid.Column="2" Content="かぶと"/>
+                                <Label Grid.Row="1" Grid.Column="2" Content="头饰"/>
                                 <ComboBox Grid.Row="1" Grid.Column="3" ItemsSource="{Binding ElementName=ListBoxCharactorItem, Path=Items}" SelectedIndex="{Binding ElementName=ListBoxParty, Path=SelectedItem.EquipmentHelmet}">
                                     <ComboBox.ItemTemplate>
                                         <DataTemplate>
@@ -277,7 +277,7 @@
                         </Grid>
                     </Grid>
                 </TabItem>
-                <TabItem Header="ふくろ">
+                <TabItem Header="袋子">
                     <ListBox ItemsSource="{Binding Bag.Items}">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
@@ -291,12 +291,12 @@
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </TabItem>
-                <TabItem Header="ルーラ">
+                <TabItem Header="传送点">
                     <ListBox ItemsSource="{Binding Places}">
                         <ListBox.ContextMenu>
                             <ContextMenu>
-                                <MenuItem Header="全て選択" Click="MenuItemPlaceCheck_Click"/>
-                                <MenuItem Header="全て非選択" Click="MenuItemPlaceUnCheck_Click"/>
+                                <MenuItem Header="选择全部" Click="MenuItemPlaceCheck_Click"/>
+                                <MenuItem Header="全取消选择" Click="MenuItemPlaceUnCheck_Click"/>
                             </ContextMenu>
                         </ListBox.ContextMenu>
                         <ListBox.ItemTemplate>
@@ -306,7 +306,7 @@
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </TabItem>
-                <TabItem Header="パーティー">
+                <TabItem Header="队伍">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -323,12 +323,12 @@
                                   SelectedIndex="{Binding ElementName=ListBoxRow, Path=SelectedItem.ID, Converter={StaticResource OrderIDConverter}}" DisplayMemberPath="Name"/>
                     </Grid>
                 </TabItem>
-                <TabItem Header="錬金釜">
+                <TabItem Header="炼金炉">
                     <ListBox ItemsSource="{Binding Recipes}">
                         <ListBox.ContextMenu>
                             <ContextMenu>
-                                <MenuItem Header="全て選択" Click="MenuItemRecipeCheck_Click"/>
-                                <MenuItem Header="全て非選択" Click="MenuItemRecipeUnCheck_Click"/>
+                                <MenuItem Header="选择全部" Click="MenuItemRecipeCheck_Click"/>
+                                <MenuItem Header="全取消选择" Click="MenuItemRecipeUnCheck_Click"/>
                             </ContextMenu>
                         </ListBox.ContextMenu>
                         <ListBox.ItemTemplate>
@@ -338,7 +338,7 @@
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </TabItem>
-                <TabItem Header="モンスター図鑑">
+                <TabItem Header="怪物图鉴">
                     <ListBox ItemsSource="{Binding Monsters}">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
@@ -351,12 +351,12 @@
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </TabItem>
-                <TabItem Header="アイテム図鑑">
+                <TabItem Header="物品指南">
                     <ListBox ItemsSource="{Binding Items}">
                         <ListBox.ContextMenu>
                             <ContextMenu>
-                                <MenuItem Header="全て選択" Click="MenuItemItemCheck_Click"/>
-                                <MenuItem Header="全て非選択" Click="MenuItemItemUnCheck_Click"/>
+                                <MenuItem Header="选择全部" Click="MenuItemItemCheck_Click"/>
+                                <MenuItem Header="全取消选择" Click="MenuItemItemUnCheck_Click"/>
                             </ContextMenu>
                         </ListBox.ContextMenu>
                         <ListBox.ItemTemplate>
@@ -366,7 +366,7 @@
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </TabItem>
-                <TabItem Header="バトルロード">
+                <TabItem Header="战斗之路">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
@@ -384,7 +384,7 @@
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
-                                        <Label Content="名前："/>
+                                        <Label Content="名："/>
                                         <ComboBox ItemsSource="{Binding Path=DataContext.Info.BattleLoadMonsters, 
                                             RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:MainWindow}}"
                                                   DisplayMemberPath="Name" Width="100"
@@ -408,7 +408,7 @@
                             </Grid.ColumnDefinitions>
                             <StackPanel>
                                 <DockPanel>
-                                    <Label Content="チーム1の名前"/>
+                                    <Label Content="团队1名称"/>
                                     <TextBox Text="{Binding TermName1, UpdateSourceTrigger=PropertyChanged}"/>
                                 </DockPanel>
                                 <Grid>
@@ -421,7 +421,7 @@
                                         <ColumnDefinition/>
                                         <ColumnDefinition/>
                                     </Grid.ColumnDefinitions>
-                                    <Label Content="1匹目"/>
+                                    <Label Content="1号怪物"/>
                                     <ComboBox Grid.Column="1" ItemsSource="{Binding ElementName=ListBoxBattleLoadMonster, Path=Items}"
                                               SelectedIndex="{Binding Term11}" IsSynchronizedWithCurrentItem="False">
                                         <ComboBox.ItemTemplate>
@@ -430,7 +430,7 @@
                                             </DataTemplate>
                                         </ComboBox.ItemTemplate>
                                     </ComboBox>
-                                    <Label Grid.Row="1" Content="2匹目"/>
+                                    <Label Grid.Row="1" Content="2号怪物"/>
                                     <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding ElementName=ListBoxBattleLoadMonster, Path=Items}"
                                               SelectedIndex="{Binding Term12}" IsSynchronizedWithCurrentItem="False">
                                         <ComboBox.ItemTemplate>
@@ -439,7 +439,7 @@
                                             </DataTemplate>
                                         </ComboBox.ItemTemplate>
                                     </ComboBox>
-                                    <Label Grid.Row="2" Content="3匹目"/>
+                                    <Label Grid.Row="2" Content="3号怪物"/>
                                     <ComboBox Grid.Row="2" Grid.Column="1" ItemsSource="{Binding ElementName=ListBoxBattleLoadMonster, Path=Items}"
                                               SelectedIndex="{Binding Term13}" IsSynchronizedWithCurrentItem="False">
                                         <ComboBox.ItemTemplate>
@@ -452,7 +452,7 @@
                             </StackPanel>
                             <StackPanel Grid.Column="1">
                                 <DockPanel>
-                                    <Label Content="チーム2の名前"/>
+                                    <Label Content="团队2名称"/>
                                     <TextBox Text="{Binding TermName2, UpdateSourceTrigger=PropertyChanged}"/>
                                 </DockPanel>
                                 <Grid>
@@ -465,7 +465,7 @@
                                         <ColumnDefinition/>
                                         <ColumnDefinition/>
                                     </Grid.ColumnDefinitions>
-                                    <Label Content="1匹目"/>
+                                    <Label Content="1号怪物"/>
                                     <ComboBox Grid.Column="1" ItemsSource="{Binding ElementName=ListBoxBattleLoadMonster, Path=Items}"
                                               SelectedIndex="{Binding Term21}" IsSynchronizedWithCurrentItem="False">
                                         <ComboBox.ItemTemplate>
@@ -474,7 +474,7 @@
                                             </DataTemplate>
                                         </ComboBox.ItemTemplate>
                                     </ComboBox>
-                                    <Label Grid.Row="1" Content="2匹目"/>
+                                    <Label Grid.Row="1" Content="2号怪物"/>
                                     <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding ElementName=ListBoxBattleLoadMonster, Path=Items}"
                                               SelectedIndex="{Binding Term22}" IsSynchronizedWithCurrentItem="False">
                                         <ComboBox.ItemTemplate>
@@ -483,7 +483,7 @@
                                             </DataTemplate>
                                         </ComboBox.ItemTemplate>
                                     </ComboBox>
-                                    <Label Grid.Row="2" Content="3匹目"/>
+                                    <Label Grid.Row="2" Content="3号怪物"/>
                                     <ComboBox Grid.Row="2" Grid.Column="1" ItemsSource="{Binding ElementName=ListBoxBattleLoadMonster, Path=Items}"
                                               SelectedIndex="{Binding Term23}" IsSynchronizedWithCurrentItem="False">
                                         <ComboBox.ItemTemplate>
