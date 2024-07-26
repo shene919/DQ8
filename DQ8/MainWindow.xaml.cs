@@ -31,7 +31,7 @@ namespace DQ8
 
 			SaveData.Instance().Open(files[0]);
 			Init();
-			MessageBox.Show("読込成功");
+			MessageBox.Show("读取成功");
 		}
 
 		private void MenuItemFileOpen_Click(object sender, RoutedEventArgs e)
@@ -49,8 +49,8 @@ namespace DQ8
 			SaveFileDialog dlg = new SaveFileDialog();
 			if (dlg.ShowDialog() == false) return;
 
-			if (SaveData.Instance().SaveAs(dlg.FileName) == true) MessageBox.Show("書込成功");
-			else MessageBox.Show("書込失敗");
+			if (SaveData.Instance().SaveAs(dlg.FileName) == true) MessageBox.Show("写入成功");
+			else MessageBox.Show("写入失败");
 		}
 
 		private void MenuItemExit_Click(object sender, RoutedEventArgs e)
@@ -157,7 +157,7 @@ namespace DQ8
 
 			SaveData.Instance().Open(dlg.FileName);
 			Init();
-			MessageBox.Show("読込成功");
+			MessageBox.Show("读取成功");
 		}
 
 		private void Init()
@@ -168,8 +168,8 @@ namespace DQ8
 
 		private void Save()
 		{
-			if (SaveData.Instance().Save() == true) MessageBox.Show("書込成功");
-			else MessageBox.Show("書込失敗");
+			if (SaveData.Instance().Save() == true) MessageBox.Show("写入成功");
+			else MessageBox.Show("写入失败");
 		}
 	}
 }
