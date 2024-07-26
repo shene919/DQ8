@@ -22,12 +22,12 @@ namespace DQ8
 			// 人物
 			List<List<String>> skills = new List<List<string>>()
 			{
-				new List<String>{"剣スキル", "ヤリスキル", "ブーメラン", "格闘スキル", "ゆうき" },
-				new List<String>{"オノスキル", "打撃スキル", "鎌スキル", "格闘スキル", "にんじょう" },
-				new List<String>{"短剣スキル", "ムチスキル", "杖スキル", "格闘スキル", "おいろけ" },
-				new List<String>{"剣スキル", "弓スキル", "杖スキル", "格闘スキル", "カリスマ" },
-				new List<String>{"扇スキル", "ムチスキル", "短剣スキル", "格闘スキル", "アウトロー" },
-				new List<String>{"爪スキル", "打撃スキル", "ブーメラン", "格闘スキル", "ねっけつ" },
+				new List<String>{"单手剑技能", "枪技能", "回旋镖技能", "格斗技能", "勇者技能" },
+				new List<String>{"斧头技能", "打撃技能", "镰刀技能", "格斗技能", "扬格斯技能" },
+				new List<String>{"短剣技能", "鞭技能", "杖技能", "格斗技能", "杰西卡技能" },
+				new List<String>{"单手剑技能", "弓技能", "杖技能", "格斗技能", "库库鲁技能" },
+				new List<String>{"扇技能", "鞭技能", "短剣技能", "格斗技能", "歌鲁达技能" },
+				new List<String>{"爪技能", "打撃技能", "回旋镖技能", "格斗技能", "莫利技能" },
 			};
 			foreach (var member in Info.Instance().Orders)
 			{
@@ -79,7 +79,7 @@ namespace DQ8
 			String[] names = { "G", "F", "E", "D", "C", "B", "A", "S" };
 			for (uint i = 0; i < names.Length; i++)
 			{
-				Ranks.Add(new BattleMonsterRank(i) { Name = "ランク" + names[i] });
+				Ranks.Add(new BattleMonsterRank(i) { Name = "排行榜" + names[i] });
 			}
 		}
 
